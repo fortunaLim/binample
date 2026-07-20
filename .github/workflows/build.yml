@@ -1,0 +1,37 @@
+# *******************************************************************************
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+name: Build binample
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  merge_group:
+    types: [checks_requested]
+  push:
+    branches:
+      - main
+      - master
+permissions:
+  contents: read
+jobs:
+  build:
+    name: 🔨 Build binample (Linux x86_64)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Check out
+        uses: actions/checkout@v7
+
+      - name: 🛠️ Setup Bazel
+        uses: bazel-contrib/setup-bazel@0.9.1
+
+      - name: 🔨 Build
+        run: bazel build //score/binample:binample
+
+      - name: ▶️ Run
+        run: bazel run //score/binample:binample

@@ -20,9 +20,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "Module Template Project"
-project_url = "https://eclipse-score.github.io/module_template/"
-project_prefix = "MODULE_TEMPLATE_"
+project = "Binample"
+project_url = "https://eclipse-score.github.io/binample/"
+project_prefix = "MODULE_BINAMPLE_"
 author = "S-CORE"
 version = "0.1"
 
@@ -46,9 +46,6 @@ extensions = [
 # the need for symlinks inside the docs/ folder.
 include_patterns = [
     "index.rst",
-    "docs/**",
-    "examples/docs/**",
-    "score/component_example/docs/**",
 ]
 
 exclude_patterns = [
