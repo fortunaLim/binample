@@ -2,5 +2,9 @@
   {
     "version": "main",
     "url": "https://fortunaLim.github.io/binample/main/"
+  },
+  {
+    "version": "pr-1",
+    "url": "https://fortunaLim.github.io/binample/pr-1/"
   }
 ]
